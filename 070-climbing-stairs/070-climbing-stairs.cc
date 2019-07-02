@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-// 1 1 2 3 5
+// 1 2 3 5 
 int climbStairs(int n){
-    if(n==1||n==2)
+    if(n==1)
         return 1;
+    if(n==2)
+        return 2;
     int *table = (int *) malloc((n+1) * sizeof(int));
     table[0] = 1,table[1]=1;
     for(int i=2;i<=n;i++)
