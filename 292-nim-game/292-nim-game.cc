@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 bool canWinNim(int n){
-    if(n%4)
-        return false;
-  return true;
+    return (n%4!=0);
 }
 int main(){
     printf("%d ",canWinNim(4));
