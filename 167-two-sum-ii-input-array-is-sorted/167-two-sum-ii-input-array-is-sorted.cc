@@ -45,5 +45,5 @@ int* twoSum(int* numbers, int numbersSize, int target, int* returnSize){
     return r;
 }
 int main(){
-    
+    return 0;
 }
