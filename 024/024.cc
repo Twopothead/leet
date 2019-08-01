@@ -17,6 +17,7 @@ void swap(struct ListNode* t1,struct ListNode* t2){
 struct ListNode* swapPairs(struct ListNode* head){
     struct ListNode *p1,*p2;
     
+
 ｝
 // struct ListNode* swapPairs(struct ListNode* head){
 //     struct ListNode *p1,*p2,*p,*pre = NULL;
