@@ -16,7 +16,20 @@ struct ListNode{
  */
 
 struct ListNode* reverseList(struct ListNode* head){
-    
+    struct ListNode *p = head,*p2;
+    struct ListNode *r = (struct ListNode *)malloc(sizeof(struct ListNode));
+    r->next = NULL;
+    while (p)
+    {
+        p2 = p->next;
+        p->next = r->next;
+        r->next = p;
+        p = p2;
+    }
+    p = r->next;
+    r->next = NULL;
+    free(r);
+    return p;
 }
 
 int main(){
@@ -33,8 +46,8 @@ int main(){
     l3->val = 3,l3->next = l4;
     l4->val = 4,l4->next = l5;
     l5->val = 5,l5->next = NULL;
-    reverseList(l1);
-    ListNode *l = l1;
+    ListNode *l =  reverseList(l1);
+
     while (l != NULL)
     {
         printf("%d ",l->val);
