@@ -15,48 +15,52 @@ void swap(struct ListNode* t1,struct ListNode* t2){
     t2->next = t1;
 }
 struct ListNode* swapPairs(struct ListNode* head){
-    struct ListNode *p1,*p2,*p,*pre = NULL;
-    struct ListNode *t1,*t2,*r;
-    p1 = head;
-    p2 = head->next;
-    r = head->next;
-    bool flag = false;
-    struct ListNode*pp;
-    while (p1 && p2)
-    {
-        pp = r;
-        t1 = p1,t2 = p2;
-        swap(t1,t2);
-        p = p1;
-        p1 = p2;
-        p2 = p;
-        // pre = p2;
-        printf("%d %d -",p1->val,p2->val);
-        // if(!flag){
-        //     r = p1;
-        //     flag = true;
-        // }
-        p1 = p2->next;
-        if(p1)
-            p2 = p1->next;
-        // pre->next =p2;
-        // pre = p1;
-        // p2 = p1->next;
-        // if(p2)
-        //     p1 = p2->next;
-                if(p1&&p2)printf("%d%d\t",p1->val,p2->val);
-                pre = p1;
-printf("pre %d\n",pre->val);
-             while (pp)
-        {
-        printf(" [%d]",pp->val);
-        pp = pp->next;
-        }
+    struct ListNode *p1,*p2;
+    
+｝
+// struct ListNode* swapPairs(struct ListNode* head){
+//     struct ListNode *p1,*p2,*p,*pre = NULL;
+//     struct ListNode *t1,*t2,*r;
+//     p1 = head;
+//     p2 = head->next;
+//     r = head->next;
+//     bool flag = false;
+//     struct ListNode*pp;
+//     while (p1 && p2)
+//     {
+//         pp = r;
+//         t1 = p1,t2 = p2;
+//         swap(t1,t2);
+//         p = p1;
+//         p1 = p2;
+//         p2 = p;
+//         // pre = p2;
+//         printf("%d %d -",p1->val,p2->val);
+//         // if(!flag){
+//         //     r = p1;
+//         //     flag = true;
+//         // }
+//         p1 = p2->next;
+//         if(p1)
+//             p2 = p1->next;
+//         // pre->next =p2;
+//         // pre = p1;
+//         // p2 = p1->next;
+//         // if(p2)
+//         //     p1 = p2->next;
+//                 if(p1&&p2)printf("%d%d\t",p1->val,p2->val);
+//                 pre = p1;
+// printf("pre %d\n",pre->val);
+//              while (pp)
+//         {
+//         printf(" [%d]",pp->val);
+//         pp = pp->next;
+//         }
 
-    }
+//     }
 
-    return r;
-}
+//     return r;
+// }
 int main(){
     struct ListNode n1,n2,n3,n4,n5,n6,n7,n8;
     n1.next = &n2;
