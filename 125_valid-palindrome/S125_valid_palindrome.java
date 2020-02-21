@@ -1,3 +1,4 @@
+/* [AC] */
 class S125_valid_palindrome {
     public boolean isPalindrome(String s) {
     	if(s.isEmpty())
